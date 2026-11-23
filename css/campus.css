@@ -1,0 +1,40 @@
+html{color-scheme:dark;background:#152821;color:#f4efe3}
+body{margin:0;font-family:system-ui,sans-serif}
+[hidden]{display:none!important}
+.campus{min-height:100svh;display:flex;flex-direction:column;background:#152821}
+.campus header{padding:clamp(24px,5vh,65px) 6vw 25px;background:#efe8d8;color:#213b33}
+.date{font:600 12px/1.6 ui-monospace,monospace;letter-spacing:.13em;margin:0}
+.date span{padding:0 7px}
+h1{font:500 clamp(43px,6vw,92px)/1 Georgia,serif;letter-spacing:-.055em;margin:10px 0}
+h1 span{color:#a05d42}
+.subject{margin:0;font-size:clamp(16px,1.7vw,23px)}
+.journey{flex:1;min-height:245px;position:relative;overflow:hidden;background:#8ba4a0}
+#campus-view{position:absolute;inset:0;width:100%;height:100%;font-family:system-ui,sans-serif}
+.leg{transform-origin:0 -12px;animation:stride .34s ease-in-out infinite alternate}
+.leg.right{animation-direction:alternate-reverse}
+.paused .leg{animation-play-state:paused}
+@keyframes stride{from{transform:rotate(-24deg)}to{transform:rotate(24deg)}}
+.journal{padding:20px 5vw 26px}
+.lessons{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(16px,2.5vw,42px);list-style:none;padding:0;margin:0}
+.lessons li{border-top:1px solid #627b69;padding-top:11px;clip-path:inset(0 var(--mask,100%) 0 0)}
+.lessons strong,.lessons small{display:block}
+.lessons strong{font-size:clamp(16px,1.45vw,22px);color:#ddedcd}
+.lessons small{font-size:clamp(14px,1.05vw,17px);line-height:1.48;margin-top:6px;color:#d1dbcf}
+#next{position:absolute;transform:translateX(-50%);display:block;background:#fff4ad;box-shadow:0 0 16px #ffedad;border:2px solid #ffe09a;box-sizing:border-box;color:#fff5d2;text-decoration:none;perspective:150px}
+.door-panel{position:absolute;inset:0;background:linear-gradient(90deg,#573f30,#9b6742);border:2px solid #d49c65;transform-origin:left;animation:unlock .55s ease-out both}
+.door-panel::after{content:"";position:absolute;right:12%;top:55%;width:4px;height:4px;border-radius:50%;background:#ffe4a3}
+.door-sign{position:absolute;bottom:calc(100% + 9px);left:50%;transform:translateX(-50%);padding:9px 13px;background:#243830;border:2px solid #ffdb87;box-shadow:3px 3px 0 #574c38;white-space:nowrap;font:650 14px system-ui}
+.door-sign::after{content:"";position:absolute;top:100%;left:48%;border:5px solid transparent;border-top-color:#ffdb87}
+#next:focus-visible{outline:4px solid white;outline-offset:4px}
+@keyframes unlock{from{transform:rotateY(0)}to{transform:rotateY(-65deg)}}
+.arrival{width:min(940px,88%);min-height:100svh;margin:auto;display:grid;align-content:center}
+.arrival a{color:#c6e0ad;margin-top:15px}
+@media(max-width:760px){.campus header{padding:20px 5vw 16px}.journey{min-height:235px}.journal{padding:16px 5vw 22px}.lessons{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.lessons small{font-size:14px}}
+@media(prefers-reduced-motion:reduce){.leg,.door-panel{animation:none}.door-panel{transform:rotateY(-65deg)}}
+.day-tone{fill:#95cde0;opacity:var(--summer,0)}
+.dusk-tone{fill:#f09c78;opacity:var(--autumn,0)}
+.night-tone{fill:#283959;opacity:var(--winter,0)}
+.night-shade{opacity:calc(var(--winter,0) * .40)}
+#stars,#moonlight{opacity:var(--winter,0)}
+.crown{fill:var(--foliage,#98b582)}
+#campus-view rect[fill="#37595c"]{fill:var(--glass,#37595c)}

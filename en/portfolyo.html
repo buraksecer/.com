@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Burak Seçer — Résumé</title>
+<link rel="icon" href="../favicon.ico">
+<link rel="stylesheet" href="../css/cv.css">
+</head>
+<body>
+<main>
+<nav aria-label="Résumé links"><a href="../index.html#secim">← Back to portfolio menu</a><a href="../cv.pdf" download>Download résumé (PDF)</a></nav>
+<header>
+<h1>Burak Seçer</h1>
+<p class="role">Software Engineer · Istanbul</p>
+<p>I began my career building internal applications and auction software for commodity exchanges. In telecom, I developed a call-center CRM and a B2B eSIM sales platform. At Banabi, I worked on the web app and APIs for rapid grocery delivery. At Delivery Hero, I helped deliver an SEO project that launched in 30 countries. In fintech, I owned the device software, service integration and CI/CD process for a next-generation ATM.</p>
+<p>Today I work in AdTech at Migros Mimeda. I build mobile SDKs for ad events, attribution systems and hourly reporting pipelines. I lead major features from RFC to release, own monitoring and coordinate integrations with Migros.</p>
+</header>
+<section>
+<h2>Experience</h2>
+<article><h3>Migros Mimeda</h3><small>2025 – Present · Istanbul</small>
+<p>I joined a small team that operated the entire system. I led Azure CI/CD implementation alongside DevOps and built an Android and iOS SDK to collect ad events in Migros apps. The resulting pipeline processed billions of events.</p>
+<p>I built attribution windows to measure advertising performance. Hourly Hangfire jobs processed BigQuery data and wrote results to the reporting database. Each job stored its last completed hour, allowing it to resume after an interruption. Reports ran one hour behind. I am currently working on SQL partitioning for this data.</p>
+<p>I own monitoring and dashboards, write RFCs, break large features into tasks and lead implementation. I coordinate OpenAI and campaign integrations with Migros. To prepare for legacy modernization, I share patterns such as Strangler Fig and Anti-Corruption Layer with the team.</p>
+<aside class="daily"><h4>What does Burak do day to day?</h4><ul><li>Write RFCs for major features.</li><li>Break work into tasks and distribute them.</li><li>Support teammates and contribute code.</li><li>Review metrics and logs and investigate anomalies.</li><li>Coordinate integrations with Migros.</li></ul></aside></article>
+<article><h3>Papara</h3><small>2023 – 2024 · Istanbul</small>
+<p>I joined a team of two and took ownership of a next-generation ATM, from industrial design through software and system architecture. I started by studying ATM regulations and wrote my first code on the physical device. The team grew to five or six people.</p>
+<p>We connected the C++ core library through a proxy DLL. The HTML interface exchanged messages with the desktop app over a socket. A .NET Core middleware service communicated with Papara services while the ATM polled a database for management commands. I designed locking so the device processed one operation at a time.</p>
+<p>I designed CI/CD for the physical device. A separate controller waited for the active operation to finish, entered maintenance mode, unpacked the release in a separate directory, swapped application files and restarted the ATM. We had a working demo around month six. The device went live within a year and attracted a buyer at Money20/20 in the Netherlands.</p>
+<aside class="daily"><h4>What does Burak do day to day?</h4><ul><li>Develop ATM software and service integrations.</li><li>Test withdrawal and maintenance flows on the physical device.</li><li>Verify locking and CI/CD work together.</li></ul></aside></article>
+<article><h3>TakEsim</h3><small>2024 · 4–5 months · Istanbul</small>
+<p>An investor asked me to build a B2B product that would let Vodafone dealers sell eSIMs to tourists. I built the admin and customer panels with Next.js, the API with .NET Core and the database with MS SQL. I packaged the applications with Docker and deployed them to AWS Fargate.</p>
+<p>I modeled dealer permissions using parent-child relationships. Dealers could create and manage their own sub-dealers, with the same rules applying at every level. This was my first professional product built on AWS from scratch. The venture ended after the investor and Vodafone disagreed.</p>
+<aside class="daily"><h4>What does Burak do day to day?</h4><ul><li>Clarify product requirements and dealer workflows with the investor.</li><li>Develop the admin panel, customer panel and API.</li><li>Design dealer permissions and manage the AWS demo.</li></ul></aside></article>
+<article><h3>Yemeksepeti / Delivery Hero</h3><small>2020 – 2023 · Istanbul</small>
+<p>I joined Banabi as a full-stack engineer and shared ownership of the web app and APIs. Working with two Agile coaches, I learned Scrum, Gitflow and merge conflict resolution. I also saw how transactional event processing and microservices supported high request volumes.</p>
+<p>During the Delivery Hero transition, I worked with the Singapore team on SEO. Our React app lacked server-side rendering. We built an indexable landing page that routed users to the relevant product at the nearest grocery store. The project launched in 30 countries, increased traffic by 1000% and revenue by 15%.</p>
+<p>I trained in Golang and helped build proxy services that connected our applications to Delivery Hero’s backend.</p>
+<aside class="daily"><h4>What does Burak do day to day?</h4><ul><li>Build features for the Banabi web app and APIs.</li><li>Integrate changes through Gitflow and resolve merge conflicts.</li><li>Work with Singapore on SEO and build Golang proxies for migration.</li></ul></aside></article>
+<article><h3>Sodyum</h3><small>2018 – 2020 · Istanbul</small>
+<p>In a team of four or five, we built a CRM for a business selling Vodafone and Digiturk products. Web leads became pending calls. The call center retrieved them through our APIs, and agents entered the results in the CRM. We tracked applications from the first call through activation.</p>
+<p>The CRM supported configurable status transitions, so sales teams could insert new approval steps. Selenium automated line activation. In my final four to five months, I took on backend team management and formally became Team Lead.</p>
+<aside class="daily"><h4>What does Burak do day to day?</h4><ul><li>Develop the call-center and CRM data flow.</li><li>Define and implement status transitions with sales.</li><li>Develop Selenium activation and coordinate backend work.</li></ul></aside></article>
+<article><h3>Alpata Teknoloji</h3><small>2016 – 2018 · Eskişehir</small>
+<p>I worked with nearly 90 commodity exchanges in Türkiye. We visited sites, observed staff workflows and gathered requirements. Using C# and MS SQL, we developed modules for registration, cashier operations, laboratories, membership and auctions.</p>
+<p>As a junior developer I owned the Rize Commodity Exchange tea auction application. I studied the auction workflow and built the WPF application from scratch, from requirements through launch. I left for military service.</p>
+<aside class="daily"><h4>What does Burak do day to day?</h4><ul><li>Visit exchanges and gather requirements on site.</li><li>Build registration, cashier and auction modules with C# and MS SQL.</li><li>Develop the tea auction application in WPF.</li></ul></aside></article>
+</section>
+<section><h2>Education</h2><h3>Fırat University</h3><p>Software Engineering · 2011–2016 · Elazığ</p></section>
+<section><h2>Technologies</h2>
+<p><strong>Languages and frameworks</strong> — C#, C++, Golang, TypeScript, .NET Core, WPF, React, Angular, Next.js, Selenium</p>
+<p><strong>Event streaming and background jobs</strong> — Apache Kafka, RabbitMQ, Azure Event Hubs, Hangfire</p>
+<p><strong>Database, cache, search</strong> — MS SQL, Redis, MongoDB, Google BigQuery, Elasticsearch</p>
+<p><strong>Cloud distribution</strong> — Azure, AWS Fargate, Docker, CI/CD</p>
+<p><strong>Monitoring and logging</strong> — Datadog, Grafana, New Relic, Seq, Kibana</p>
+</section>
+</main>
+</body>
+</html>

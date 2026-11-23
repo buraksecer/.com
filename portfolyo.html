@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Burak Seçer — Özgeçmiş</title>
+<link rel="icon" href="favicon.ico">
+<link rel="stylesheet" href="css/cv.css">
+</head>
+<body>
+<main>
+<nav aria-label="Özgeçmiş bağlantıları"><a href="index.html#secim">← Portfolyo seçimine dön</a><a href="cv.pdf" download>CV indir (PDF)</a></nav>
+<header>
+<h1>Burak Seçer</h1>
+<p class="role">Yazılım Mühendisi · İstanbul</p>
+<p>Kariyerime ticaret borsaları için kurum içi uygulamalar ve açık artırma yazılımları geliştirerek başladım. Telekom alanında çağrı merkeziyle entegre bir CRM ve Vodafone bayileri için bir B2B eSIM satış platformu geliştirdim. Hızlı market teslimatında Banabi’nin web uygulaması ve API’leri üzerinde çalıştım, ardından Delivery Hero’da 30 ülkede yayına giren SEO projesine katkı sağladım. Fintech alanında yeni nesil bir ATM’nin cihaz yazılımını, servis entegrasyonunu ve CI/CD sürecini üstlendim.</p>
+<p>Bugün Migros Mimeda’da AdTech alanında çalışıyorum. Mobil uygulamalardan ad event toplayan SDK’lar, reklam performansını hesaplayan attribution sistemleri ve saatlik raporlama akışları geliştiriyorum. Büyük feature’ların RFC aşamasından yayına kadar geliştirilmesine liderlik ediyor, monitoring altyapısını ve Migros ekibiyle entegrasyonları yönetiyorum.</p>
+</header>
+<section>
+<h2>Deneyim</h2>
+<article><h3>Migros Mimeda</h3><small>2025 – Devam ediyor · İstanbul</small>
+<p>Migros Mimeda’ya katıldığımda küçük bir ekiple sistemin tamamını yönetiyorduk. İlk olarak DevOps ekibiyle koordineli çalışarak Azure üzerindeki CI/CD süreçlerinin kurulmasını yönettim. Ardından Migros uygulamalarında ad event’lerini toplamak için Android ve iOS SDK’sı geliştirdim. Bu SDK ile başlayan veri akışı milyarlarca ad event’in işlenmesini sağladı.</p>
+<p>Toplanan veriden reklam performansını hesaplamak için attribution window mantığını kurdum. Hangfire işleri saatlik olarak BigQuery verisini işliyor ve sonuçları rapor veritabanına yazıyordu. Her iş, işlediği son saati kaydettiği için kesinti sonrasında kaldığı yerden devam edebiliyor ve raporlar bir saat gecikmeyle hazırlanıyordu. Şu sıralar bu veriyi SQL’de partition’lara ayırarak yönetmek üzerine çalışıyorum.</p>
+<p>İzleme altyapısının ve dashboard’ların sorumluluğunu üstleniyorum. Büyük özellikler için RFC hazırlıyor, işi görevlere bölüyor ve ekibe liderlik ediyorum. OpenAI entegrasyonu ve yeni kampanya tipi üzerinde çalışırken Migros ekibiyle ihtiyaçları ve entegrasyonu birlikte yönetiyorum. Eski sistemlerin yenilenmesine hazırlık olarak ekibe Strangler Fig ve Anti-Corruption Layer gibi tasarım kalıplarını anlatıyorum.</p>
+<aside class="daily"><h4>Burak bir günde ne yapar?</h4><ul><li>Büyük feature’lar için RFC yazarım.</li><li>İşi task’lara böler ve ekip içinde dağıtırım.</li><li>Takım arkadaşlarıma destek olur, geliştirmelerde aktif rol alırım.</li><li>Monitoring araçlarında metrikleri ve logları takip eder, anomalileri incelerim.</li><li>Toplantılara aktif katılır, Migros ekibiyle entegrasyonları yönetirim.</li></ul></aside></article>
+<article><h3>Papara</h3><small>2023 – 2024 · İstanbul</small>
+<p>Papara’da yöneticimle iki kişilik bir ekip olarak başladım. Eski bir ATM’yi temel alıp yeni nesil bir cihaz ortaya çıkarmak için endüstriyel tasarımdan yazılım ve sistem mimarisine kadar süreci üstlendim. İlk gün ATM regülasyonlarını incelemeye başladım ve ilk kodumu fiziksel cihazın başında yazdım. Ekip zamanla 5–6 kişiye ulaştı.</p>
+<p>C++ ile yazılmış çekirdek kütüphaneyi bir proxy DLL üzerinden cihaz uygulamasına bağladık. HTML arayüzü, masaüstü uygulamasıyla soket üzerinden haberleşiyordu. Papara servisleriyle .NET Core middleware iletişim kurarken ATM, yönetim komutlarını veritabanından polling ile alıyordu. Cihazda aynı anda tek işlem çalışacak şekilde lock mekanizmasını tasarladım.</p>
+<p>Fiziksel cihazın CI/CD sürecini de kurguladım. Ayrı bir controller uygulaması yeni sürüm geldiğinde aktif işlemin tamamlanmasını bekliyor, cihazı bakım moduna alıyor ve yeni paketi ayrı bir klasöre açıyordu. Ardından uygulama dosyalarını değiştirip ATM yazılımını yeniden başlatıyordu. Altıncı ay civarında çalışan bir demo hazırladık. Bir yıl içinde canlıya çıkan cihaz, Hollanda’daki Money20/20’de sergilendi ve alıcı buldu.</p>
+<aside class="daily"><h4>Burak bir günde ne yapar?</h4><ul><li>ATM’nin cihaz yazılımını ve servislerle entegrasyonunu geliştiririm.</li><li>Para çekme ve bakım akışlarını fiziksel cihazda test ederim.</li><li>Lock mekanizmasının ve CI/CD akışının birlikte doğru çalışmasını sağlarım.</li></ul></aside></article>
+<article><h3>TakEsim</h3><small>2024 · 4–5 ay · İstanbul</small>
+<p>TakEsim’de bir yatırımcı, Vodafone bayilerinin turistlere eSIM satabileceği bir B2B ürün kurmamı istedi. İlk hedef, yatırımcının beklentisini ve bayi satış sürecini anlayıp hızlıca gösterilebilir bir ürün çıkarmaktı. Yönetim ve müşteri panellerini Next.js, API’yi .NET Core ile geliştirdim. Veriyi MS SQL’de tuttum ve Docker ile paketlediğim uygulamaları AWS Fargate’e taşıdım.</p>
+<p>Ürünün temel tasarım kararı bayi yetkileriydi. Bayi ağını parent-child ilişkileriyle modelledim. Bir bayi, alt bayilerini açıp yönetebiliyor, aynı kural yeni eklenen alt bayiler için de geçerli oluyordu. Burada ilk kez profesyonel bir ürünü AWS üzerinde sıfırdan kurdum. Yatırımcı ile Vodafone arasındaki anlaşmazlık nedeniyle girişim sona erdi.</p>
+<aside class="daily"><h4>Burak bir günde ne yapar?</h4><ul><li>Yatırımcıyla ürün gereksinimlerini ve bayi satış akışını netleştiririm.</li><li>Yönetim ve müşteri panelleriyle API’yi geliştiririm.</li><li>Alt bayi yetkilerini tasarlar ve demo ortamını AWS üzerinde yönetirim.</li></ul></aside></article>
+<article><h3>Yemeksepeti / Delivery Hero</h3><small>2020 – 2023 · İstanbul</small>
+<p>Banabi’ye fullstack geliştirici olarak katıldım ve ekiple birlikte web uygulaması ile API’lerin sorumluluğunu üstlendim. İki Agile koçuyla çalışırken Scrum pratiğini, ortak kod tabanında Gitflow ile geliştirme yapmayı ve merge conflict’leri çözmeyi öğrendim. Bu ölçekte bir sistemde event’lerin transaction içinde nasıl işlendiğini ve mikroservislerin yoğun isteğe göre nasıl ölçeklendiğini gördüm.</p>
+<p>Delivery Hero’ya geçiş sırasında Singapur ekibiyle bir SEO projesi geliştirdik. React uygulamasında server-side rendering olmadığı için Google ürün sayfalarını arama terimlerine göre beklediğimiz biçimde listelemiyordu. Google’ın indeksleyebildiği bir ara sayfa hazırlayıp ziyaretçiyi en yakın marketin ürün detayına yönlendirdik. Çözüm 30 ülkede yayına girdi. Trafik %1000, gelir %15 arttı.</p>
+<p>Geçişin backend tarafında şirket içinde Golang eğitimi aldım. Ardından Golang ile proxy servisleri geliştirerek mevcut uygulamaları Delivery Hero’nun backend mimarisine bağlama işinde yer aldım.</p>
+<aside class="daily"><h4>Burak bir günde ne yapar?</h4><ul><li>Banabi’nin web uygulaması ve API’lerinde yeni özellikler geliştiririm.</li><li>Değişiklikleri Gitflow ile ortak kod tabanına alır, merge conflict’leri çözerim.</li><li>Singapur ekibiyle SEO geliştirmelerini yürütür, Golang proxy servisleriyle geçişe katkı sağlarım.</li></ul></aside></article>
+<article><h3>Sodyum</h3><small>2018 – 2020 · İstanbul</small>
+<p>Sodyum’da 4–5 kişilik bir ekiple Vodafone ve Digiturk ürünleri satan bir şirket için CRM geliştirdik. Web sitesindeki başvuruları arama bekleyen kayıtlar olarak işaretliyorduk. Çağrı merkezi yazılımı arayacağı kayıtları API’lerimizden alıyor, temsilci görüşme sonucunu CRM’e giriyordu. Başvuru ilk görüşmeden hat açılışına kadar CRM üzerinden takip ediliyordu.</p>
+<p>CRM’in temel özelliği, başvurunun geçeceği durumların ve bu status transition’ların değiştirilebilmesiydi. Satış ekibi yeni bir kontrol adımına ihtiyaç duyduğunda bunu mevcut akışa ekleyebiliyordu. Hat aktivasyonu Selenium otomasyonuyla yapılıyordu. Son 4–5 ayımda backend ekibini yönetmeye başladım ve resmî olarak Team Lead rolünü üstlendim.</p>
+<aside class="daily"><h4>Burak bir günde ne yapar?</h4><ul><li>Çağrı merkeziyle CRM arasındaki veri akışını geliştiririm.</li><li>Satış ekibiyle status transition’ları belirler ve CRM’e uygularım.</li><li>Selenium ile hat aktivasyonu akışını geliştirir, backend ekibinin işlerini koordine ederim.</li></ul></aside></article>
+<article><h3>Alpata Teknoloji</h3><small>2016 – 2018 · Eskişehir</small>
+<p>İlk işimde Türkiye genelinde 90’a yakın ticaret borsasıyla çalıştım. Borsaları ziyaret ederek personelin günlük işlerini yerinde gözlemledik ve ihtiyaçları birlikte belirledik. C# ve MS SQL kullandığımız kurum içi uygulamada tescil, vezne, laboratuvar, üye işlemleri ve salon satışı gibi modüller geliştiriyorduk. Bu ziyaretler, bir özelliği sahadaki işleyişe göre nasıl tasarlayacağımı öğretti.</p>
+<p>Junior geliştiriciyken Rize Ticaret Borsasının çay açık artırma uygulaması bana emanet edildi. Satış salonundaki süreci öğrenip WPF ile uygulamayı sıfırdan geliştirdim. Böylece bir projeyi ihtiyaç analizinden kullanıma kadar tek başıma üstlendim. Askerlik nedeniyle şirketten ayrıldım.</p>
+<aside class="daily"><h4>Burak bir günde ne yapar?</h4><ul><li>Ticaret borsalarını ziyaret eder, kullanıcı ihtiyaçlarını yerinde belirlerim.</li><li>C# ve MS SQL ile tescil, vezne ve salon satışı gibi modülleri geliştiririm.</li><li>Rize’deki çay açık artırma uygulamasının WPF geliştirmesini yürütürüm.</li></ul></aside></article>
+</section>
+<section><h2>Eğitim</h2><h3>Fırat Üniversitesi</h3><p>Yazılım Mühendisliği · 2011 – 2016 · Elazığ</p></section>
+<section><h2>Teknolojiler</h2>
+<p><strong>Diller ve framework’ler</strong> — C#, C++, Golang, TypeScript, .NET Core, WPF, React, Angular, Next.js, Selenium</p>
+<p><strong>Event streaming ve background jobs</strong> — Apache Kafka, RabbitMQ, Azure Event Hubs, Hangfire</p>
+<p><strong>Database, cache, search</strong> — MS SQL, Redis, MongoDB, Google BigQuery, Elasticsearch</p>
+<p><strong>Cloud distribution</strong> — Azure, AWS Fargate, Docker, CI/CD</p>
+<p><strong>Monitoring ve logging</strong> — Datadog, Grafana, New Relic, Seq, Kibana</p>
+</section>
+</main>
+</body>
+</html>

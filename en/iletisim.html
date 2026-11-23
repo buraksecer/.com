@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Burak Seçer — Contact</title>
+<link rel="icon" href="../favicon.ico">
+<link rel="stylesheet" href="../css/entry.css">
+<style>
+.contact { min-height:100dvh; display:grid; align-content:center; width:fit-content; max-width:100%; padding:20px; font:clamp(14px,3vw,18px)/1.7 ui-monospace,Menlo,monospace; }
+.contact h1 { font:inherit; letter-spacing:normal; margin:0 0 1em; color:#a2e6bc; }
+.contact p { margin:.35em 0; width:fit-content; max-width:100%; }
+.contact a { overflow-wrap:anywhere; }
+.contact footer { margin-top:1.5em; }
+@media (prefers-reduced-motion:no-preference) {
+.contact p { animation:type-line 1.1s steps(36,end) both; }
+.contact p:nth-of-type(2) { animation-delay:1.1s; }
+.contact p:nth-of-type(3) { animation-delay:2.2s; }
+.contact p:focus-within { animation:none; }
+}
+@keyframes type-line { from { clip-path:inset(0 100% 0 0); } to { clip-path:inset(0); } }
+</style>
+</head>
+<body class="terminal">
+<main class="contact">
+<h1>&gt; Contact</h1>
+<p>GitHub → <a href="https://github.com/buraksecer">github.com/buraksecer</a></p>
+<p>LinkedIn → <a href="https://www.linkedin.com/in/buraksecer/">linkedin.com/in/buraksecer</a></p>
+<p>Email → <a href="mailto:info@buraksecer.com">info@buraksecer.com</a></p>
+<footer><a href="../index.html#secim">← Back to portfolio menu</a></footer>
+</main>
+</body>
+</html>

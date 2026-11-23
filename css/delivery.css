@@ -1,0 +1,53 @@
+.delivery-level{min-height:100svh;display:flex;flex-direction:column;background:#173d46;color:#fff2de}
+.delivery-level header{padding:14px 5vw;background:#fae8ca;color:#23494e}
+.delivery-level h1{font-size:clamp(31px,5vw,66px)}
+.delivery-level h1:focus{outline:none}
+.shore{position:relative;flex:1;min-height:clamp(220px,40vh,520px);background:#a3d2d6}
+#seaside{position:absolute;inset:0;width:100%;height:100%}
+.coast-notes{display:grid;grid-template-columns:1fr 1fr;gap:4vw;padding:16px 5vw 8px}
+.coast-notes article{clip-path:inset(0 var(--reveal,100%) 0 0)}
+.coast-notes h2{margin:0;font:500 clamp(22px,2.6vw,38px) Georgia,serif}
+.coast-notes p{font-size:clamp(13px,1.25vw,17px);line-height:1.45;margin:6px 0}
+.coast-notes b{color:#ffdc95}
+.delivery-level footer{display:flex;justify-content:space-between;min-height:36px;align-items:center;padding:0 5vw 8px}
+.delivery-level footer a,.coast-replay{font:600 14px system-ui;color:#f4d8a5;background:none;border:0;cursor:pointer}
+.sea-glints{animation:sea-drift 6s linear infinite}
+.coast-ferry{animation:ferry-cross 19s ease-in-out infinite alternate}
+.buoy-body{animation:buoy-bob var(--swell-time,2.4s) ease-in-out var(--swell-delay,0s) infinite alternate}
+.walking .sandals{animation:sandal-stride .3s ease-in-out infinite alternate;transform-origin:0 -16px}
+@keyframes sea-drift{to{transform:translateX(66px)}}
+@keyframes ferry-cross{from{transform:translate(470px,136px)}to{transform:translate(600px,135px)}}
+@keyframes buoy-bob{to{transform:translateY(2px) rotate(2deg)}}
+@keyframes sandal-stride{from{transform:skewX(12deg)}to{transform:skewX(-12deg)}}
+@media(max-width:650px){.coast-notes{grid-template-columns:1fr;gap:10px}.shore{min-height:215px}}
+@media(prefers-reduced-motion:reduce){.sea-glints,.coast-ferry,.buoy-body,.walking .sandals{animation:none}}
+/* Idle scenery keeps moving after the story clocks reach their final frame. */
+.propeller{animation:propeller-spin .13s linear infinite;transform-origin:0 0}
+@keyframes propeller-spin{0%{transform:scaleY(1) skewX(-6deg)}50%{transform:scaleY(-1) skewX(6deg)}100%{transform:scaleY(1) skewX(-6deg)}}
+.campus-breeze,.exchange-breeze{animation:sky-breeze 14s ease-in-out infinite alternate}
+@keyframes sky-breeze{from{transform:translate(-18px,1px)}to{transform:translate(42px,-4px)}}
+.city-traffic{animation:city-drive 5s linear infinite}
+@keyframes city-drive{to{transform:translateX(140px)}}
+.request-path .standby-link{animation:request-idle 1.2s linear infinite}
+@keyframes request-idle{to{stroke-dashoffset:-16}}
+@media(prefers-reduced-motion:reduce){.propeller,.campus-breeze,.exchange-breeze,.city-traffic,.delivery-level,.game-view,.request-path .standby-link{animation:none}}
+.mirror-tiles{animation:mirror-turn 1.6s linear infinite;transform-origin:0 0}
+.disco-glints{animation:mirror-glow 1.4s ease-in-out infinite alternate}
+.deck-lights{opacity:.36;animation:deck-sweep 2s ease-in-out infinite alternate;transform-origin:22px -50px}
+@keyframes mirror-turn{0%,100%{transform:scaleX(1)}50%{transform:scaleX(-1)}}
+@keyframes mirror-glow{to{opacity:.35}}
+@keyframes deck-sweep{from{transform:rotate(-6deg)}to{transform:rotate(7deg)}}
+@media(prefers-reduced-motion:reduce){.mirror-tiles,.disco-glints,.deck-lights{animation:none}}
+
+@media (prefers-reduced-motion: no-preference) {
+  .harbour-traffic { animation: harbour-voyage var(--voyage) ease-in-out infinite alternate; }
+  .funnel-smoke { animation: funnel-plume 3s linear infinite; }
+}
+@keyframes harbour-voyage {
+  from { transform: translateX(-55px); }
+  to { transform: translateX(75px); }
+}
+@keyframes funnel-plume {
+  from { opacity: .65; transform: translate(0, 0) scale(.45); }
+  to { opacity: 0; transform: translate(-19px, -20px) scale(1.65); }
+}

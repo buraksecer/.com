@@ -1,0 +1,36 @@
+* { box-sizing: border-box; }
+body { margin: 0; background: #f3edde; color: #203e36; font-family: system-ui, sans-serif; }
+main { width: min(960px, 100%); margin: auto; padding: clamp(24px, 6vw, 76px); }
+h1 { font: normal clamp(2.65rem, 7vw, 6rem)/1.02 Georgia, serif; letter-spacing: -.05em; margin: .35em 0 .65em; }
+a { color: inherit; }
+.plain h1 { margin-top: 1em; }
+.terminal { background: #000; color: #fff; }
+.welcome {
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding: 12px;
+  display: grid;
+  place-items: center;
+}
+.welcome nav { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; max-width: 100%; }
+.welcome a {
+  display: flex;
+  align-items: center;
+  gap: .7em;
+  padding: 14px 18px;
+  background: #fff;
+  color: #000;
+  border: 1px solid #fff;
+  text-decoration: none;
+  font: 1rem/1.4 ui-monospace, Menlo, monospace;
+}
+.welcome a::before { content: ">"; }
+.welcome a:hover, .welcome a:focus-visible { color: #fff; background: #000; }
+.welcome a:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+@media (max-width: 640px) { .welcome nav { grid-template-columns: 1fr; } }
+@media (min-width: 850px) { .welcome nav { grid-template-columns: repeat(2, 1fr); } }
+.language { position: absolute; inset-block-start: 18px; inset-inline-end: 18px; display: flex; gap: 6px; }
+.language button { background: #000; color: #fff; border: 1px solid #fff; padding: 7px 12px; cursor: pointer; font: 14px ui-monospace, Menlo, monospace; }
+.language button[aria-pressed="true"] { background: #fff; color: #000; }
+.language button:focus-visible { outline: 2px solid white; outline-offset: 3px; }

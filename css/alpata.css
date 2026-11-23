@@ -1,0 +1,123 @@
+.exchange{min-height:100svh;display:flex;flex-direction:column;background:#203b32;color:#f5f0df}
+.exchange header{padding:clamp(20px,4vh,46px) 6vw;background:#efe8d8;color:#243f35}
+.exchange h1:focus{outline:none}
+.exchange-scene{position:relative;flex:1;min-height:clamp(220px,38vh,420px);overflow:hidden;background:#9fb6aa}
+#exchange-world{position:absolute;width:100%;height:100%;inset:0}
+#exchange-world text{font:700 10px system-ui;letter-spacing:1px;fill:#37493c}
+.exchange-dialog{padding:22px 6vw 26px;min-height:175px}
+.episode{max-width:78ch}
+.episode h2{font:500 clamp(24px,3vw,39px)/1.1 Georgia,serif;margin:0 0 8px}
+.episode p{line-height:1.5;margin:0;color:#e1e7d9}
+.exchange-actions{min-height:45px;margin-top:12px}
+.exchange-actions>*{display:inline-block;background:#dceabf;color:#193529;border:0;border-radius:4px;padding:11px 17px;text-decoration:none;font:650 15px system-ui;cursor:pointer}
+@media(max-width:600px){.exchange-dialog{min-height:230px}.exchange header{padding:18px 5vw}.exchange-dialog{padding-inline:5vw}}
+#exchange-world .ad-title{fill:#ffeab5;font:bold 10px ui-monospace,monospace;letter-spacing:.3px}
+#exchange-world .ad-detail{fill:#d4e7d2;font:8px system-ui;letter-spacing:0}
+.exchange-dialog{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:3vw}
+.episode{clip-path:inset(0 var(--cut,100%) 0 0)}
+.episode h2{font-size:clamp(21px,2.2vw,33px)}
+.exchange-actions{grid-column:1/-1}
+@media(max-width:700px){.exchange-dialog{grid-template-columns:1fr;gap:16px}.exchange-actions{margin:0}.exchange-scene{min-height:clamp(230px,39svh,350px)}}
+#exchange-world .branch-name{font:bold 10px system-ui;letter-spacing:.15px}
+#exchange-world .wall-caption{fill:#c6e5dc;font:bold 8.5px ui-monospace,monospace;letter-spacing:.3px}
+#exchange-world .wall-price{fill:#a7ffc2;font:bold 22px ui-monospace,monospace;letter-spacing:0}
+#sodyum-door:focus-visible rect{stroke:white;stroke-width:3}
+.agency header{background:#e3ece8}
+.office{flex:1;background:linear-gradient(115deg,#be987d,#dcc7a3 42%,#a4bbb3);display:grid;align-content:end;justify-items:center;padding-top:22px;overflow:hidden}
+.studio-wall{width:min(94%,850px);display:grid;grid-template-columns:minmax(0,1fr) minmax(145px,.38fr);gap:clamp(10px,3vw,32px);align-items:center}
+.crm-wall{background:#172c36;color:#d6efe6;border:5px solid #58626a;border-radius:9px;padding:12px;box-shadow:0 6px 0 #45444855}
+.crm-heading{display:flex;justify-content:space-between;gap:8px;font:12px ui-monospace,monospace;border-bottom:1px solid #496269;padding-bottom:8px}
+.crm-map{width:100%;display:block}
+.crm-wire{fill:none;stroke:#527078;stroke-width:2}
+.crm-wire.current{stroke:#eebb77}
+.crm-node rect{fill:#263d47;stroke:#668488}
+.crm-node text{fill:#e3eeee;text-anchor:middle;font:13px system-ui}
+.crm-node.current rect{fill:#305d55;stroke:#99e7c4}
+.lead-packet{fill:#ffe6a3;stroke:#916c39}
+.trace-status{min-height:3.4em;font:14px/1.45 system-ui}
+.trace-status b{color:#ffdb9e;margin-right:.6em}
+.retrace{background:transparent;border:0;color:#b4e4ce;padding:6px 0;cursor:pointer;text-decoration:underline}
+.postits{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:0;margin:0;list-style:none}
+.postits li{color:#36382e;background:#ffdc84;text-align:center;padding:12px 3px 15px;box-shadow:2px 3px 2px #52463244;font:600 clamp(11px,1.2vw,15px) ui-monospace,monospace;transform:rotate(-3deg)}
+.postits li:nth-child(3n+2){background:#a9dac5;transform:rotate(3deg)}
+.postits li:nth-child(3n){background:#eeb5af;transform:rotate(-1deg)}
+@media(max-width:600px){.studio-wall{grid-template-columns:1fr}.postits{grid-template-columns:repeat(4,1fr);gap:6px}.postits li{padding:6px 2px}.trace-status{min-height:4em}}
+.office-floor{width:min(100%,900px);display:block}
+.office-walker{animation:office-walk 6s linear both}
+.office-walker .leg{animation-iteration-count:18}
+@keyframes office-walk{from{transform:translate(36px,117px) scale(1.45)}to{transform:translate(576px,117px) scale(1.45)}}
+.agency .episode{animation:office-note .7s both}
+.agency .episode:nth-child(2){animation-delay:2.8s}
+.agency .episode:nth-child(3){animation-delay:5s}
+@keyframes office-note{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0)}}
+@media(prefers-reduced-motion:reduce){.agency *{animation-duration:.001s!important;animation-delay:0s!important}}
+
+/* Keep the wall in view while the camera follows the desks. */
+.agency{height:100svh;height:100dvh;min-height:0;display:grid;grid-template-rows:auto minmax(0,1fr) auto}
+.agency header{padding:8px 4vw;display:flex;gap:18px;align-items:baseline}
+.agency header h1{font-size:clamp(25px,4vw,46px);margin:0}
+.agency .office{min-height:0;display:grid;grid-template-rows:minmax(0,1fr) minmax(40px,22%);align-content:stretch;padding:6px 0 0}
+.agency .studio-wall{min-height:0;align-self:stretch;align-items:center}
+.agency .crm-wall{height:100%;max-height:385px;min-height:0;box-sizing:border-box;display:grid;grid-template-rows:auto minmax(0,1fr) auto auto;align-self:center}
+.agency .crm-map{height:100%;min-height:0}
+.agency .office-floor{width:100%;height:100%;align-self:end}
+.agency .office-walker{animation:none}
+.agency .office-walker .leg{animation-iteration-count:infinite}
+.agency.arrived .leg{animation-play-state:paused}
+.agency .exchange-dialog{position:relative;display:block;min-height:0;padding:10px 4vw 12px}
+.agency .episode{animation:none;clip-path:none;max-width:95ch}
+.agency .episode h2{font-size:clamp(17px,2vw,25px);margin-bottom:3px}
+.agency .episode p{font-size:clamp(13px,1.15vw,16px);line-height:1.4}
+.agency .exchange-actions{min-height:0;margin:5px 0 0}
+.agency .exchange-actions a{padding:2px 0;background:none;color:#cce4d4;font-size:13px;text-decoration:underline}
+.terminal{opacity:.55}.terminal.online{opacity:1}
+.online .signal,.online .meter,.online .check{stroke-dasharray:55;animation:screen-draw 1.5s ease-in-out infinite}
+.online .field{animation:screen-type 1.8s ease-out infinite;transform-box:fill-box;transform-origin:left}
+.online .field:nth-child(2){animation-delay:.25s}.online .field:nth-child(3){animation-delay:.5s}
+.agency.arrived .terminal *{animation:none}
+@keyframes screen-draw{from{stroke-dashoffset:55}to{stroke-dashoffset:0}}
+@keyframes screen-type{from{transform:scaleX(.08)}to{transform:scaleX(1)}}
+@media(max-width:600px){.agency .studio-wall{grid-template-rows:minmax(0,1fr) auto;gap:6px}.agency .postits{width:100%}.agency .postits li{padding:3px}.agency .crm-wall{padding:6px}.agency .trace-status{min-height:0;font-size:13px}.agency header{gap:10px}.agency .exchange-dialog{padding-block:7px}}
+@media(max-height:500px) and (orientation:landscape){.agency{grid-template-columns:2fr 1fr;grid-template-rows:auto minmax(0,1fr)}.agency header{grid-column:1/-1}.agency .exchange-dialog{align-self:center}.agency .postits li{padding:4px}.agency .trace-status{min-height:0;font-size:12px}}
+.agency .office{position:relative}
+.office-cable{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:1}
+.office-cable path{fill:none;stroke:#dbb365;stroke-width:1.5;stroke-dasharray:4 5;opacity:.8}
+.office-cable circle{fill:#ffe49a;stroke:#8d6b33}
+.story-rail{display:grid;position:relative;grid-template-columns:repeat(3,minmax(0,1fr));gap:2vw}
+.agency .story-rail .episode{clip-path:inset(0 var(--cut,100%) 0 0)}
+@media(max-width:850px),(max-height:500px){
+.agency .story-rail{display:grid;grid-template-columns:1fr;gap:8px}
+.agency .story-rail h2{font-size:16px;margin:0 0 2px}
+.agency .story-rail p{font-size:13px;line-height:1.35}
+.agency .exchange-dialog{max-height:62dvh;overflow-y:auto;box-sizing:border-box}
+.agency .exchange-actions{margin-top:5px}
+
+}
+.agency .office{grid-template-rows:minmax(0,1fr);align-content:center;padding:0}
+.agency .studio-wall{display:block;justify-self:center;width:min(86%,760px)}
+.agency .postits{grid-template-columns:repeat(8,minmax(0,1fr))}
+.agency .office-floor{align-self:stretch;width:100%;height:100%}
+.workstation text{text-anchor:middle}
+.desk-note text{font:600 10px ui-monospace,monospace;fill:#304338}
+.monitor-name{font:7px ui-monospace,monospace;fill:#acccc7}
+.monitor-task{font:bold 8px system-ui;fill:#c9f0cc}
+.working .typing{animation:key-stroke .24s infinite alternate;transform-origin:32px 113px}
+@keyframes key-stroke{to{transform:rotate(-5deg)}}
+.agency .exchange-actions button{color:#cce4d4;background:transparent;margin-right:12px}
+@media(max-width:600px){.agency .postits{grid-template-columns:repeat(4,1fr)}}
+.agency .tram-office{grid-template-rows:minmax(0,1fr) auto;background:#b6cdc4}
+.tram-world text{text-anchor:middle;font-family:system-ui,sans-serif}
+.stop-title{fill:#fff2cf;font-size:13px;font-weight:700}
+.stop-result{fill:#bdf2bf;font-size:12px;opacity:0}
+.visited .stop-result{opacity:1}
+.stop-stack{fill:#cddcd6;font-size:8px}
+.operating .stop-art{animation:station-action .45s ease-in-out alternate 2}
+@keyframes station-action{to{transform:translate(0,19px) scale(1.09)}}
+.station-caption{box-sizing:border-box;width:100%;margin:0;padding:6px 4vw;background:#354f48;color:#fff2ce;font-size:clamp(12px,1.3vw,17px)}
+.flight-world text{font-family:ui-monospace,monospace}
+.stack-label,.flight-stop{text-anchor:middle;font-size:11px;font-weight:700;fill:#353f36}
+.flight-stop{fill:#fff5d8;paint-order:stroke;stroke:#344e48;stroke-width:3px}
+.json-line{font-size:11px;fill:#dbebe5;white-space:pre}
+.json-status.updated{fill:#ffe29c}
+.stack-drop,.impact,.stop-sign{opacity:0}
+.flight-world{background:#85b9ca}

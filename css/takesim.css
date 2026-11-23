@@ -1,0 +1,54 @@
+#takesim { background: #263c35; min-height: 100svh; }
+#takesim header { padding: 24px 5vw; background: #eee6d7; color: #253e35; }
+.meeting-room { background: linear-gradient(to bottom,#e3d3be 78.5%,#938677 78.5%); }
+.meeting-room svg { display: block; width: 100%; max-width: 1050px; margin: auto; }
+.meeting-notes { display: grid; grid-template-columns: repeat(3,1fr); gap: 3vw; padding: 18px 5vw; }
+.meeting-notes h2 { margin: 0; font: 500 clamp(22px,2.4vw,38px) Georgia,serif; }
+.meeting-notes p { line-height: 1.55; }
+#takesim footer { padding: 8px 5vw 24px; display: flex; justify-content: space-between; }
+#takesim a { padding: 10px; color: #ffe4b6; }
+@media(max-width: 690px) { .meeting-notes { grid-template-columns: 1fr; } }
+@media(prefers-reduced-motion: no-preference) {
+  #takesim .branch, .meeting-notes article { animation: meeting-reveal .7s ease-out both; }
+  #takesim .branch, .meeting-notes article:nth-child(2) { animation-delay: 1.5s; }
+  #takesim .deeper, .meeting-notes article:nth-child(3) { animation-delay: 3s; }
+  .gesture { transform-origin: 3px 7px; animation: meeting-gesture 2.7s ease-in-out infinite alternate; }
+}
+@keyframes meeting-reveal { from { opacity: 0; } to { opacity: 1; } }
+@keyframes meeting-gesture { to { transform: rotate(-14deg); } }
+
+#takesim { height: 100svh; height: 100dvh; min-height: 0; display: grid; grid-template-rows: auto minmax(0,1fr) auto auto; }
+#takesim header { padding: clamp(8px,2vh,20px) 5vw; }
+#takesim h1 { margin: 4px 0; font-size: clamp(32px,7vh,72px); }
+.meeting-room { min-height: 0; }
+.meeting-room svg { height: 100%; }
+.meeting-pages { display: none; }
+#takesim footer { padding: 2px 5vw max(4px,env(safe-area-inset-bottom)); }
+@media (max-width: 1000px), (max-height: 700px) {
+  #takesim { grid-template-rows: auto minmax(0,1fr) auto auto auto; }
+  .meeting-pages { display: flex; gap: 6px; padding: 6px 5vw 0; }
+  .meeting-pages button { font: inherit; font-size: 14px; padding: 6px 12px; background: transparent; color: #ffe4b6; border: 1px solid #82938a; border-radius: 3px; cursor: pointer; }
+  .meeting-pages button[aria-pressed=true] { background: #ffe4b6; color: #253e35; }
+  .meeting-notes { display: block; padding: 8px 5vw; }
+  .meeting-notes article { display: none; animation: none; }
+  .meeting-notes article.selected { display: block; }
+  .meeting-notes p { margin: 5px 0; font-size: 15px; line-height: 1.4; }
+}
+@media (max-height: 480px) and (orientation: landscape) {
+  #takesim { grid-template-columns: 42% 58%; grid-template-rows: auto auto 1fr auto; }
+  #takesim header, #takesim footer { grid-column: span 2; }
+  .meeting-room { grid-row: span 2; }
+  .meeting-pages, .meeting-notes { padding-inline: 12px; }
+}
+
+.meeting-door-leaf { transform-box: fill-box; transform-origin: left center; transition: transform .65s ease-in-out; }
+.door-open .meeting-door-leaf { transform: skewY(-12deg) scaleX(.13); }
+.meeting-club-link:focus-visible rect:last-of-type { stroke: white; stroke-width: 3; }
+.door-open .club-light { animation: meeting-lights 2s ease-in-out infinite alternate; }
+.door-open .door-sparks { animation: meeting-lights 1.3s ease-in-out infinite alternate-reverse; }
+.door-open .door-mirrors { transform-box: fill-box; transform-origin: center; animation: mirror-turn 2.2s linear infinite; }
+@keyframes meeting-lights { from { opacity: .35; } to { opacity: .95; } }
+@media (prefers-reduced-motion: reduce) {
+  .meeting-door-leaf { transition: none; }
+  #takesim .club-light, #takesim .door-sparks, #takesim .door-mirrors { animation: none; }
+}
